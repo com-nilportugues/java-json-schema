@@ -3,12 +3,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.nilportugues</groupId>
-    <artifactId>jsonschema</artifactId>
-    <version>1.2.0</version>
+    <artifactId>java-json-schema</artifactId>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>JsonSchema</name>
+    <name>java-json-schema</name>
     <url>http://github.com/nilportugues/java-json-schema/</url>
+
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -108,9 +110,9 @@
         </license>
     </licenses>
     <scm>
-        <url>git@github.com:nilportugues/JsonSchema</url>
-        <connection>scm:git:git@github.com:nilportugues/JsonSchema</connection>
-        <developerConnection>scm:git:git@github.com:nilportugues/JsonSchema</developerConnection>
+        <url>git@github.com:nilportugues/java-json-schema</url>
+        <connection>scm:git:git@github.com:nilportugues/java-json-schema</connection>
+        <developerConnection>scm:git:git@github.com:nilportugues/java-json-schema</developerConnection>
     </scm>
     <parent>
         <groupId>org.sonatype.oss</groupId>
