@@ -1,7 +1,7 @@
-JJSchema
+JsonSchema
 ===============
 
-A Java JSON Schema and Hyper-Schema generator. Currently, it is based on v4 draft.
+A Java JSON Schema and Hyper-Schema generator based on v4 draft.
 
 Latest Release
 ----------------
@@ -9,8 +9,8 @@ Latest Release
 ```xml
 <dependency>
   <groupId>com.github.nilportugues</groupId>
-  <artifactId>jjschema</artifactId>
-  <version>1.1</version>
+  <artifactId>jsonschema</artifactId>
+  <version>1.2.0</version>
 </dependency>
 ```
 
@@ -65,9 +65,9 @@ static class Product {
 Type the following code:
 
 ```java
-JsonSchemaGenerator v4generator = SchemaGeneratorBuilder.draftV4Schema().build();
-JsonNode productSchema = v4generator.generateSchema(Product.class);
-System.out.println(productSchema);
+final JsonSchemaGenerator v4generator = SchemaGeneratorBuilder.draftV4Schema().build();
+JsonNode schema = v4generator.generateSchema(Product.class);
+System.out.println(schema.toString);
 ```
 
 The output:
@@ -100,11 +100,10 @@ The output:
       "minItems" : 1
     }
   },
-  "required" : [ "id", "name", "price" ],
-  "$schema" : "http://json-schema.org/draft-04/schema#"
+  "required" : [ "id", "name", "price" ]
 }
 ```
 
 ## Thanks to
 
-Danilo Reinert for writing the original version: https://github.com/reinert/JJSchema
+Danilo Reinert for writing the original version: https://github.com/reinert/JsonSchema
