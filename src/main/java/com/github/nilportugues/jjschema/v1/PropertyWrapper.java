@@ -169,11 +169,6 @@ public class PropertyWrapper extends SchemaWrapper {
     }
 
     @Override
-    public String getDollarSchema() {
-        return schemaWrapper.getDollarSchema();
-    }
-
-    @Override
     public String getId() {
         return schemaWrapper.getId();
     }
@@ -252,8 +247,9 @@ public class PropertyWrapper extends SchemaWrapper {
     protected void processAttributes(ObjectNode node, AccessibleObject accessibleObject) {
         final JsonSchema attributes = accessibleObject.getAnnotation(JsonSchema.class);
         if (attributes != null) {
-            //node.put("$schema", SchemaVersion.DRAFTV4.getLocation().toString());
+
             node.remove("$schema");
+
             if (!attributes.id().isEmpty()) {
                 node.put("id", attributes.id());
             }

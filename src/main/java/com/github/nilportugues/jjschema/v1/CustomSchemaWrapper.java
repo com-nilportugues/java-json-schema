@@ -208,7 +208,7 @@ public class CustomSchemaWrapper extends SchemaWrapper implements Iterable<Prope
     protected void processAttributes(ObjectNode node, Class<?> type) {
         final JsonSchema attributes = type.getAnnotation(JsonSchema.class);
         if (attributes != null) {
-            //node.put("$schema", SchemaVersion.DRAFTV4.getLocation().toString());
+
             if (!attributes.id().isEmpty()) {
                 node.put("id", attributes.id());
             }

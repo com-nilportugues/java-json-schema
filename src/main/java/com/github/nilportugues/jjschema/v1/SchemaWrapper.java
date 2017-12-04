@@ -21,7 +21,6 @@ package com.github.nilportugues.jjschema.v1;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.github.fge.jsonschema.SchemaVersion;
 import com.github.nilportugues.jjschema.annotation.Nullable;
 
 /**
@@ -38,15 +37,6 @@ public abstract class SchemaWrapper {
 
     public JsonNode asJson() {
         return node;
-    }
-
-    public String getDollarSchema() {
-        return getNodeTextValue(node.get("$schema"));
-    }
-
-    public SchemaWrapper putDollarSchema() {
-        node.put("$schema", SchemaVersion.DRAFTV4.getLocation().toString());
-        return this;
     }
 
     public String getId() {

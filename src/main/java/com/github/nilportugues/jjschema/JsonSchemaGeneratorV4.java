@@ -20,7 +20,6 @@ package com.github.nilportugues.jjschema;
 
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.github.fge.jsonschema.SchemaVersion;
 import com.github.nilportugues.jjschema.annotation.JsonSchema;
 
 /**
@@ -36,9 +35,7 @@ public class JsonSchemaGeneratorV4 extends JsonSchemaGenerator {
         if (!props.$ref().isEmpty()) {
             schema.put("$ref", props.$ref());
         }
-        if (autoPutVersion) {
-            schema.put("$schema", SchemaVersion.DRAFTV4.getLocation().toString());
-        }
+
         if (!props.id().isEmpty()) {
             schema.put("id", props.id());
         }

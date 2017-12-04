@@ -33,9 +33,7 @@ public class JsonSchemaV4Factory extends JsonSchemaFactory {
 
     @Override
     public JsonNode createSchema(Class<?> type) {
-        SchemaWrapper schemaWrapper = SchemaWrapperFactory.createWrapper(type);
-        if (isAutoPutDollarSchema())
-            schemaWrapper.putDollarSchema();
+        final SchemaWrapper schemaWrapper = SchemaWrapperFactory.createWrapper(type);
         return schemaWrapper.asJson();
     }
 }

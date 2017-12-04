@@ -25,6 +25,5 @@
             "minItems": 1
         }
     },
-    "required": ["id", "name", "price"],
-    "$schema": "http://json-schema.org/draft-04/schema#"
+    "required": ["id", "name", "price"]
 }
