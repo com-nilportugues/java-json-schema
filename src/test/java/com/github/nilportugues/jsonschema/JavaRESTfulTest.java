@@ -30,7 +30,7 @@ import junit.framework.TestCase;
 public class JavaRESTfulTest extends TestCase {
 
     private ObjectWriter om = new ObjectMapper().writerWithDefaultPrettyPrinter();
-    private JsonSchemaGenerator v4hyperGenerator = SchemaGeneratorBuilder.draftV4HyperSchema().setAutoPutSchemaVersion(false).build();
+    private JsonSchemaGenerator v4hyperGenerator = SchemaGeneratorBuilder.draftV4HyperSchema().build();
 
     public void testHyperSchema() throws JsonProcessingException, TypeException {
         JsonNode userHyperSchema = v4hyperGenerator.generateSchema(User.class);

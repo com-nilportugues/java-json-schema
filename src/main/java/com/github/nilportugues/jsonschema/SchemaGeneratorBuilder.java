@@ -43,10 +43,6 @@ public class SchemaGeneratorBuilder {
             this.generator = generator;
         }
 
-        public ConfigurationStep setAutoPutSchemaVersion(boolean autoPutVersion) {
-            generator.autoPutVersion = autoPutVersion;
-            return this;
-        }
 
         public ConfigurationStep sortProperties(boolean sortProperties) {
             generator.sortProperties = sortProperties;
